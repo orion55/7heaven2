@@ -84,3 +84,59 @@ block content
 
         .works__control.control.control--right
             a.control__link(href="#") Right
+
+    .tweets
+        .tweets__wrap
+            h2.tweets__title New Tweets
+            ul#slider-tweets.tweets__list
+                - var n = 1;
+                while n < 5
+                    li.tweets__item.tweet
+                        .tweet__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+                        .tweet__author themefire
+                        .tweet__date 35 seconds ago
+                    - n++;
+            a.btn.btn--tweet(href="#") Follow Us
+            .control__dots.control__dots--inverse
+                - var n = 1;
+                while n < 5
+                    a.control__dot(href="#")= n++
+
+    .posts
+        .posts__wrap
+            h2.posts__title Recent posts
+            .posts__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            - var category_obj = [{number:10, category: "Web Design"}, {number:167, category: "Video"}, {number:55, category: "Photo"}];
+            each val in category_obj
+                .posts__item.post
+                    .post__picture
+                        img.post__image(src="#" alt="#")
+                    .post__square square
+                    .post__title Lorem ipsum dolor sit amet
+                    .post__info
+                        span.post__text by
+                        span.post__author John Doe
+                        span.post__text /
+                        span.date January 25, 2014
+                    hr.post__hr
+                    .post__excerpt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    .post__footer
+                        .post_comment
+                            i.fa.fa-comments(aria-hidden="true")
+                            span.post__comm-number= val.number
+                            span.post__foo-text Comments
+                        .post__category
+                            i.fa.fa-lightbulb-o(aria-hidden="true")
+                            span.post__cat-name= val.category
+                            span.post__foo-text Category
+
+            .posts__control.control.control--left
+                a.control__link(href="#") Left
+
+            .control__dots
+                - var n = 1;
+                while n < 5
+                    a.control__dot(href="#")= n++
+
+            .posts__control.control.control--right
+                a.control__link(href="#") Right
