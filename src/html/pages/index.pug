@@ -1,4 +1,86 @@
 extends ../main.layout.pug
 
 block content
-    h1 Привет мир!!!
+    .slider
+        ul#slider-main.slider__list
+            - var n = 1;
+            while n < 4
+                li.slider__item
+                    img.slider__image(src="#" alt="slider0" + n)
+                    .slider__inner.promo
+                        h2.promo__title Lorem ipsum dolor sit amet
+                        img.promo__pic(src="#" alt="cavalier-slider")
+                        .promo__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        a.btn.btn--animate(href="#") Read more
+                - n++;
+
+    .whatme
+        .whatme__wrap
+            h2.whatme__title What We Wo
+            .whatme__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .whatme__item.chart
+                .chart__circle.chart__circle--green
+                .chart__percent 81
+                .chart__title Unique design
+                .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+            .whatme__item.chart
+                .chart__circle.chart__circle--red
+                .chart__percent 40
+                .chart__title Site Template
+                .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+            .whatme__item.chart
+                .chart__circle.chart__circle--blue
+                .chart__percent 60
+                .chart__title Wp Theme
+                .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+
+    .services
+        .services__wrap
+            h2.services__title Services
+            .services__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .services__item.service
+            - var titles = ['Unique design', 'Site Template', 'Wp Theme', 'eCommerce'];
+            - var n = 1;
+                each val in titles
+                    .service__image
+                        .service__picture(src="#" alt="pict0" + n)
+                        .service__title= val
+                        .service__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
+                    - n++;
+
+    .works
+        .works__wrap
+            h2.works__title Recent work
+            nav.nav-works
+                ul.nav-works__list
+                    - var links = ["All", "Web Design", "Site Template", "Wordpress Theme"];
+                        each val in links
+                            li.nav-works__item
+                                a.nav-works__link(href="#")= val
+        .works__box
+            - var number = 1;
+            - for (var i = 1; i <= 2; i++) {
+            .works__row
+                - for (var j = 1; j <= 3; j++) {
+                .work
+                    a.work__link(href="#") Link
+                    .work__photo
+                        img.work__image(src="#" alt="work0" + number)
+                    .work__popup.popup
+                        img.popup_image(src="#" alt="#")
+                        .popup__title Project Title Here
+                        a.btn(href="#") View Work
+                - number++;
+                - }
+            - }
+
+        .works__control.control.control--left
+            a.control__link(href="#") Left
+
+        .control__dots
+            - var n = 1;
+            while n < 5
+                a.control__dot(href="#")= n++
+
+        .works__control.control.control--right
+            a.control__link(href="#") Right
