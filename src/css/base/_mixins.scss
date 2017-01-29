@@ -1,0 +1,32 @@
+@mixin box-shadow($params) {
+  box-shadow: $params;
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+}
+
+@mixin border-radius($params) {
+  border-radius: $params;
+  -webkit-border-radius: $params;
+  -moz-border-radius: $params;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin inline-block($value) {
+  display: inline-block;
+  vertical-align: $value;
+}
+
+@mixin inline-block-top {
+  display: inline-block;
+  vertical-align: top;
+}

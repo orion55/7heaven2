@@ -1,0 +1,29 @@
+include mixins/layout.mixins.pug
+
+doctype html
+html(lang='en')
+    head
+        title 7 Heaven
+        meta(charset='UTF-8')
+        meta(name="description" content='Best page in the World!')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='HandheldFriendly' content='true')
+        link(rel="icon" type="image/x-icon" href="img/favicon.ico")
+
+        //build:css css/vendor.min.css
+        +vendor('style', 'normalize-css/normalize.css')        
+        +vendor('style', 'bxslider/jquery.bxslider.css')
+        //endbuild
+        link(rel="stylesheet" href="css/styles.min.css")
+    body
+
+        block content
+
+        include footer.pug
+
+        script(src="js/jquery.min.js")
+        script(src="js/jquery.bxslider.js")
+
+        //build:js js/main.min.js
+        script(src="../../js/slider.js")
+        //endbuild
