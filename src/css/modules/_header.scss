@@ -1,0 +1,69 @@
+.header {
+  background: url('../img/background.jpg') no-repeat top center;
+  height: 783px;
+}
+
+.header__wrap {
+  width: 1025px;
+  margin: 0 auto;
+  padding: 17px 0;
+  @include clearfix();
+}
+
+.header_box {
+  background-color: rgba(255, 255, 255, 0);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(213, 232, 255, 0.45) 100%);
+  box-shadow: 5px 9px 29px 0 rgba(46, 8, 59, 0.34);
+  height: 105px;
+}
+
+.logo {
+  width: 170px;
+  height: 60px;
+  overflow: hidden;
+  float: left;
+}
+
+.nav {
+  float: right;
+  @include clearfix();
+  padding-top: 13px;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  float: left;
+  padding: 12px 21px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -7px;
+    width: 12px;
+    height: 37px;
+    display: block;
+    background: url("../img/menu/separator.png") no-repeat;
+  }
+  &:hover {
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 25px;
+    opacity: 0.2;
+    //box-shadow: inset 0 5px 8px 0 rgba(67, 74, 132, 0.36);
+    box-shadow: inset 0 5px 8px 0 rgba(67, 74, 132, 1);
+    //.nav__link {
+    //  color:  #e2fefd;
+    //  opacity: 1;
+    //}
+  }
+}
+
+.nav__link {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #e2fefd;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+
+}

@@ -1,12 +1,13 @@
 header.header
-    .header__wrap
-       .logo
-            a.logo__link(href="index.html")
-                img.logo__img(src="#" alt="#")
+    .header_box
+        .header__wrap
+            .logo
+                a.logo__link(href="index.html")
+                    img.logo__img(src="img/logo.svg" alt="logo")
 
-       nav.nav
-           ul.nav__list
-               - var links = ['Home', 'About Us', 'Portfolio', 'Blog', 'Contact Us'];
-                each val in links
-                    li.nav__item
-                        a.nav__link(href="#")= val
+            nav.nav
+                ul.nav__list
+                    - var links = ['Home', 'About Us', 'Portfolio', 'Blog', 'Contact Us'];
+                        each val in links
+                            li.nav__item
+                                a.nav__link(href="#")= val
