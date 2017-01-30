@@ -4,12 +4,12 @@ block content
     .slider
         ul#slider-main.slider__list
             - var n = 1;
-            while n < 4
-                li.slider__item
-                    img.slider__image(src="#" alt="slider0" + n)
-                    .slider__inner.promo
+            while n < 2
+                li.slider__item.promo
+                    .promo__image
+                        img.promo__pic(src="img/promo/0" + n + ".png" alt="promo0" + n)
+                    .promo__box
                         h2.promo__title Lorem ipsum dolor sit amet
-                        img.promo__pic(src="#" alt="cavalier-slider")
                         .promo__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         a.btn.btn--animate(href="#") Read more
                 - n++;

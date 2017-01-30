@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#slider-main').bxSlider(
+    $('#slider-main1').bxSlider(
         {
             preloadImages: true,
             mode: 'fade',

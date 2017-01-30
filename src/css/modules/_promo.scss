@@ -1,0 +1,44 @@
+.promo {
+}
+
+.promo__box {
+  width: 1025px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.promo__title {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #e7fffe;
+  font-size: 3.056rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo__desc {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #e9edf2;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.promo__image {
+  height: 670px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: -334px;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.promo__pic {
+  width: auto;
+  height: auto;
+}
