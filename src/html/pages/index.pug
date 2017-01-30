@@ -16,8 +16,8 @@ block content
 
     .whatme
         .whatme__wrap
-            h2.whatme__title What We Wo
-            .whatme__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            h2.title What We Wo
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             .whatme__item.chart
                 .chart__circle.chart__circle--green
                 .chart__percent 81
@@ -36,8 +36,8 @@ block content
 
     .services
         .services__wrap
-            h2.services__title Services
-            .services__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            h2.title Services
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             .services__item.service
             - var titles = ['Unique design', 'Site Template', 'Wp Theme', 'eCommerce'];
             - var n = 1;
@@ -50,7 +50,7 @@ block content
 
     .works
         .works__wrap
-            h2.works__title Recent work
+            h2.title Recent work
             nav.nav-works
                 ul.nav-works__list
                     - var links = ["All", "Web Design", "Site Template", "Wordpress Theme"];
@@ -87,7 +87,7 @@ block content
 
     .tweets
         .tweets__wrap
-            h2.tweets__title New Tweets
+            h2.title.title--tweets New Tweets
             ul#slider-tweets.tweets__list
                 - var n = 1;
                 while n < 5
@@ -104,8 +104,8 @@ block content
 
     .posts
         .posts__wrap
-            h2.posts__title Recent posts
-            .posts__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            h2.title Recent posts
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             - var category_obj = [{number:10, category: "Web Design"}, {number:167, category: "Video"}, {number:55, category: "Photo"}];
             each val in category_obj
                 .posts__item.post
@@ -140,3 +140,72 @@ block content
 
             .posts__control.control.control--right
                 a.control__link(href="#") Right
+
+    .pricing
+        .pricing__wrap
+            h2.title Pricing Tables
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            - var pricing_obj = [{price: 99, name: "Basic"}, {price: 159, name: "Standart"}, {price: 299, name: "Unlimited"}];
+                each val in pricing_obj
+                    .pricing__item
+                        .pricing__name= val.name
+                        .price
+                            span.price__text $
+                            span.price__value= val.price
+                            span.price__text / month
+                        .pricing__services.services
+                            ul.services__list
+                                - var titles = ['Web Design', 'Photography', 'WordPress', 'Html Templates', 'eCommerce'];
+                                each val in titles
+                                    li.services__item= val
+                        a.btn.btn--pricing(href="#") Purchase
+
+    .contacts
+        .contacts__wrap
+            .contacts__item
+                img.contacts__picture(src="#" alt="#")
+                .contacts__title Address
+                .contacts__text 1600 Pennsylvania Avenue NW<br>Washington, DC 20500
+            .contacts__item
+                img.contacts__picture(src="#" alt="#")
+                .contacts__title Phones
+                span.contacts__text +32 4 8906 6004 - Office<br>+32 4 8522 6218 - Fax
+            .contacts__item
+                img.contacts__picture(src="#" alt="#")
+                .contacts__title Mail
+                span.contacts__text.contacts__text--dots support@7heaven.com
+                span.contacts__text - Support
+                span.contacts__text.contacts__text--dots info@7heaven.com
+                span.contacts__text - InfoCenter
+
+    .location
+        .location__wrap
+            h2.title Our Location
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .location__map
+
+    .feedback
+        .feedback__wrap
+            h2.title FeedBack
+            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            form.feedback__form.form(method="post" action="#" name="feedback")
+                input.form__item(type="text" placeholder="John Doe" name="username")
+                input.form__item(type="email" placeholder="EMail" name="email")
+                textarea.form__textarea(name="textarea")
+                button.btn(type="submit") Post Comment
+
+    .partners
+        h2.title Our partners
+        .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        .partners__item
+            - var n = 1;
+            while n < 5
+                a.partners__link(href="#")
+                    img.partners__image(src="#" alt="#")
+                - n++;
+
+    .subscribe
+        form.subscribe__form.form(method="post" action="#" name="subscribe")
+            input.form__item(type="email" placeholder="EMail" name="email")
+            button.btn(type="submit") Subscribe
+        .subscribe__text * We promise to keep all your detalis safe and we wont send spam!
