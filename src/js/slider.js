@@ -1,13 +1,15 @@
 $(document).ready(function () {
-    $('#slider-main1').bxSlider(
+    $('#slider-main').bxSlider(
         {
             preloadImages: true,
             mode: 'fade',
-            controls: false,
             auto: true,
-            autoStart: true,
             pause: 5000,
-            pager: true
+            pager: false,
+            nextSelector: '#slider-next',
+            prevSelector: '#slider-prev',
+            nextText: 'Right',
+            prevText: 'Left'
         }
     );
 });

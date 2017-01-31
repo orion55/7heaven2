@@ -11,7 +11,7 @@
   border: solid 1px rgba(255, 255, 255, 50);
   text-decoration: none;
   text-transform: uppercase;
-  padding: 11px 24px;
+  padding: 11px 21px;
   vertical-align: middle;
   transition: background-color 0.5s ease;
   user-select: none;
@@ -27,4 +27,9 @@
     position: relative;
     top: 5px;
   }
+}
+
+.btn--animate {
+  animation-name: zoomIn;
+  animation-duration: 0.75s;
 }

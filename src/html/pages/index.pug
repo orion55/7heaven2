@@ -4,7 +4,7 @@ block content
     .slider
         ul#slider-main.slider__list
             - var n = 1;
-            while n < 2
+            while n < 4
                 li.slider__item.promo
                     .promo__image
                         img.promo__pic(src="img/promo/0" + n + ".png" alt="promo0" + n)
@@ -13,6 +13,8 @@ block content
                         .promo__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         a.btn.btn--animate(href="#") Read more
                 - n++;
+        span.slider__arrow.arrow.arrow--left#slider-prev
+        span.slider__arrow.arrow.arrow--right#slider-next
 
     .whatme
         .whatme__wrap

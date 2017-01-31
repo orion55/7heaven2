@@ -5,19 +5,22 @@
   width: 1025px;
   position: absolute;
   text-align: center;
-  top: 75%;
+  top: 491px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .promo__title {
-  font-family: 'Dosis', 'Arial', sans-serif;
+  font-family: 'DosisBold', 'Arial', sans-serif;
   color: #e7fffe;
-  font-size: 3.056rem;
+  font-size: 55px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  padding-bottom: 20px;
+  animation-name: zoomIn;
+  animation-duration: 0.75s;
 }
 
 .promo__desc {
@@ -29,6 +32,9 @@
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
+  padding-bottom: 20px;
+  animation-name: zoomIn;
+  animation-duration: 0.75s;
 }
 
 .promo__image {

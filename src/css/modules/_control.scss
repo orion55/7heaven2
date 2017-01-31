@@ -1,0 +1,31 @@
+.arrow {
+  background: url("../img/control/sprite_control.png") no-repeat;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  //text-indent: -9999px;
+}
+
+.arrow--left {
+  width: 35px;
+  height: 35px;
+  background-position: -2px -2px;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    background-position: -41px -2px;
+  }
+}
+
+.arrow--right {
+  width: 35px;
+  height: 35px;
+  background-position: -2px -41px;
+  top: 50%;
+  right: 25%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    background-position: -41px -41px;
+  }
+}
