@@ -1,25 +1,25 @@
 .whatme {
-  padding-top: 92px;
+  padding-top: 97px;
   padding-bottom: 81px;
   background-color: #e9edf2;
 }
 
 .whatme__wrap {
-  width: 950px;
+  width: 967px;
   margin: 0 auto;
   text-align: center;
 }
 
 .whatme__row {
   @include clearfix();
-  @include add-grid(3);
-  @include add-gutter(1/4);
 }
 
 .whatme__item {
-  @for $i from 1 through 3 {
-    &:nth-of-type(3n + #{$i}) {
-      @include grid-span(1, $i);
-    }
+  float: left;
+  width: 25%;
+  margin-right: 10%;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
