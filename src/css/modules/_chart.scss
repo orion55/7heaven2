@@ -1,0 +1,44 @@
+.chart {
+  position: relative;
+}
+
+.chart__circle {
+  width: 223px;
+  height: 223px;
+  margin-bottom: 28px;
+}
+
+.chart__percent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #92a4bd;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.chart__title {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #5465a2;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.chart__desc {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #7a829e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}

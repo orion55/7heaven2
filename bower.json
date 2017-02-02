@@ -20,6 +20,7 @@
     "jquery": "^1.0.0",
     "bxslider": "*",
     "normalize-css": "^5.0.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "chart.js": "^2.4.0"
   }
 }
