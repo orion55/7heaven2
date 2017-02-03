@@ -168,14 +168,14 @@ gulp.task('watch', function () {
     });
 });
 
-gulp.task('watch-no-image', function () {
-    gulp.watch(paths.pug.src, ['pug']);
-    gulp.watch(paths.scss.src, ['sass']);
-    gulp.watch(paths.js.src, ['scripts']);
-    gulp.watch(paths.fonts.src, ['fonts']);
-});
+// gulp.task('watch-no-image', function () {
+//     gulp.watch(paths.pug.src, ['pug']);
+//     gulp.watch(paths.scss.src, ['sass']);
+//     gulp.watch(paths.js.src, ['scripts']);
+//     gulp.watch(paths.fonts.src, ['fonts']);
+// });
 
 
 /* --------- default --------- */
 gulp.task('default', ['pug', 'sass', 'images', 'sync', 'fonts', 'copy-file', 'scripts', 'watch']);
-gulp.task('default-no-image', ['pug', 'sass', 'sync', 'fonts', 'copy-file', 'watch-no-image']);
+// gulp.task('default-no-image', ['pug', 'sass', 'sync', 'fonts', 'copy-file', 'watch-no-image']);

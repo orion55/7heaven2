@@ -1,8 +1,51 @@
-.services{
-  width: 985px;
-  margin: 74px auto 84px;
-  //margin-top: 74px;
-  //margin-bottom: 84px;
-  //margin-left: auto;
-  //margin-right: auto;
+.services {
+  width: 984px;
+  margin: 78px auto 84px;
+}
+
+.service__title {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #5465a2;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.service__desc {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #7a829e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.services__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 984px;
+  margin: 0;
+}
+
+.services__item {
+  flex-basis: 441px;
+  width: 441px;
+  display: flex;
+  padding-bottom: 40px;
+  justify-content: space-between;
+}
+
+.service__picture {
+  width: 120px;
+  height: 121px;
+}
+
+.service__box {
+  width: 290px;
+  flex-basis: 290px;
+  padding-top: 11px;
 }

@@ -48,8 +48,8 @@
   text-transform: uppercase;
 }
 
-.subtitle{
-  font-family: 'Dosis', 'Arial', sans-serif;
+.subtitle {
+  font-family: 'DosisLight', 'Arial', sans-serif;
   color: #536783;
   font-size: 18px;
   font-weight: 300;
@@ -59,6 +59,10 @@
   margin: 0 auto;
 }
 
-.padding-56{
+.subtitle--whatme{
   padding-bottom: 43px;
+}
+
+.subtitle--services {
+  padding-bottom: 55px;
 }
