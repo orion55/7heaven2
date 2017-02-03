@@ -1,0 +1,40 @@
+.nav-works {
+  padding-bottom: 50px;
+}
+
+.nav-works__list {
+  text-align: center;
+}
+
+.nav-works__item {
+  display: inline-block;
+  font-size: 0;
+  padding: 8px 16px;
+  position: relative;
+  transition: 0.5s;
+  border: solid 2px transparent;
+
+  &:hover {
+    border: solid 2px #ced9e7;
+    border-radius: 25px;
+
+    & .nav-works__link {
+      font-weight: 700;
+    }
+  }
+}
+
+.nav-works__link {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #536783;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+
+  &:before {
+    content: "\2022";
+    color:  #96a2b2;
+    margin-right: 5px;
+  }
+}

@@ -1,6 +1,6 @@
 .services {
   width: 984px;
-  margin: 78px auto 84px;
+  margin: 78px auto 35px;
 }
 
 .service__title {
@@ -42,6 +42,11 @@
 .service__picture {
   width: 120px;
   height: 121px;
+  transition: .5s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 }
 
 .service__box {

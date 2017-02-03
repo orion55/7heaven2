@@ -56,40 +56,40 @@ block content
 
     .works
         .works__wrap
-            h2.title Recent work
+            h2.title.title--works Recent work
             nav.nav-works
                 ul.nav-works__list
                     - var links = ["All", "Web Design", "Site Template", "Wordpress Theme"];
                         each val in links
                             li.nav-works__item
                                 a.nav-works__link(href="#")= val
-        .works__box
-            - var number = 1;
-            - for (var i = 1; i <= 2; i++) {
-            .works__row
-                - for (var j = 1; j <= 3; j++) {
-                .work
-                    a.work__link(href="#") Link
-                    .work__photo
-                        img.work__image(src="#" alt="work0" + number)
-                    .work__popup.popup
-                        img.popup_image(src="#" alt="#")
-                        .popup__title Project Title Here
-                        a.btn(href="#") View Work
-                - number++;
+            .works__box
+                - var number = 1;
+                - for (var i = 1; i <= 2; i++) {
+                .works__row
+                    - for (var j = 1; j <= 3; j++) {
+                    .work
+                        a.work__link(href="#") Link
+                        .work__photo
+                            img.work__image(src="#" alt="work0" + number)
+                        .work__popup.popup
+                            img.popup_image(src="#" alt="#")
+                            .popup__title Project Title Here
+                            a.btn(href="#") View Work
+                    - number++;
+                    - }
                 - }
-            - }
 
-        .works__control.control.control--left
-            a.control__link(href="#") Left
+            .works__control.control.control--left
+                a.control__link(href="#") Left
 
-        .control__dots
-            - var n = 1;
-            while n < 5
-                a.control__dot(href="#")= n++
+            .control__dots
+                - var n = 1;
+                while n < 5
+                    a.control__dot(href="#")= n++
 
-        .works__control.control.control--right
-            a.control__link(href="#") Right
+            .works__control.control.control--right
+                a.control__link(href="#") Right
 
     .tweets
         .tweets__wrap
