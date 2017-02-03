@@ -11,15 +11,12 @@
 }
 
 .whatme__row {
-  @include clearfix();
+  width: 967px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .whatme__item {
-  float: left;
-  width: 25%;
-  margin-right: 10%;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 252px;
 }

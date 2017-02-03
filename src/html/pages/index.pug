@@ -22,17 +22,20 @@ block content
             .subtitle.padding-56 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             .whatme__row
                 .whatme__item.chart
-                    canvas.chart__circle.chart__circle--green#chart-design
+                    .chart__circle
+                        canvas.chart__canvas#chart-design(width="223" height="223")
                     .chart__percent 81%
                     .chart__title Unique design
                     .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
                 .whatme__item.chart
-                    canvas.chart__circle.chart__circle--red#chart-template
+                    .chart__circle
+                        canvas.chart__circle#chart-template(width="223" height="223")
                     .chart__percent 40%
                     .chart__title Site Template
                     .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
                 .whatme__item.chart
-                    canvas.chart__circle.chart__circle--blue#chart-wp
+                    .chart__circle
+                        canvas.chart__circle#chart-wp(width="223" height="223")
                     .chart__percent 60%
                     .chart__title Wp Theme
                     .chart__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.

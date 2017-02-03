@@ -17,6 +17,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const urlAdjuster = require('gulp-css-url-adjuster');
+const concat = require('gulp-concat');
 const reload = browserSync.reload;
 
 /* --------- paths --------- */
@@ -37,9 +38,9 @@ var paths = {
     },
 
     js: {
-        src: SRC_PATH + '/js/**/*.js',
+        src: SRC_PATH + '/js/*.js',
         entry: SRC_PATH + '/js/main.js',
-        dist: DIST_PATH + 'js'
+        dist: DIST_PATH + '/js/'
     },
 
     img: {
@@ -140,12 +141,27 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(paths.fonts.dist))
 });
 
+gulp.task('scripts', function () {
+    return gulp.src(paths.js.src)
+        .pipe(plumber({
+            errorHandler: function (error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(paths.js.dist))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.js.dist))
+        .pipe(browserSync.reload({stream: true}))
+});
 
 // watch
 gulp.task('watch', function () {
     gulp.watch(paths.pug.src, ['pug']);
     gulp.watch(paths.scss.src, ['sass']);
-    // gulp.watch(paths.js.src, ['scripts']);
+    gulp.watch(paths.js.src, ['scripts']);
     gulp.watch(paths.fonts.src, ['fonts']);
     gulp.watch([paths.img.src], function (event, cb) {
         gulp.start('images');
@@ -155,11 +171,11 @@ gulp.task('watch', function () {
 gulp.task('watch-no-image', function () {
     gulp.watch(paths.pug.src, ['pug']);
     gulp.watch(paths.scss.src, ['sass']);
-    // gulp.watch(paths.js.src, ['scripts']);
+    gulp.watch(paths.js.src, ['scripts']);
     gulp.watch(paths.fonts.src, ['fonts']);
 });
 
 
 /* --------- default --------- */
-gulp.task('default', ['pug', 'sass', 'images', 'sync', 'fonts', 'copy-file', 'watch']);
+gulp.task('default', ['pug', 'sass', 'images', 'sync', 'fonts', 'copy-file', 'scripts', 'watch']);
 gulp.task('default-no-image', ['pug', 'sass', 'sync', 'fonts', 'copy-file', 'watch-no-image']);

@@ -5,14 +5,17 @@
 .chart__circle {
   width: 223px;
   height: 223px;
-  margin-bottom: 28px;
+  margin: 0 auto 38px;
+}
+
+.chart__canvas {
 }
 
 .chart__percent {
   position: absolute;
   left: 0;
   right: 0;
-  top: 125px;
+  top: 109px;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Dosis', 'Arial', sans-serif;
