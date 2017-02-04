@@ -193,6 +193,52 @@ a {
   .arrow--right:hover {
     background-position: -41px -41px; }
 
+.control {
+  background: url("../img/control/control_sprite.png") no-repeat;
+  display: block;
+  cursor: pointer;
+  width: 35px;
+  height: 35px; }
+
+.control--left {
+  background-position: -2px -2px;
+  margin-right: 16px; }
+  .control--left:hover {
+    background-position: -41px -2px; }
+
+.control--right {
+  background-position: -2px -41px; }
+  .control--right:hover {
+    background-position: -41px -41px; }
+
+.control__link {
+  width: 100%;
+  height: 100%; }
+
+.control__dots {
+  margin-top: 11px; }
+  .control__dots:before, .control__dots:after {
+    content: "";
+    display: table; }
+  .control__dots:after {
+    clear: both; }
+
+.control__dot {
+  display: block;
+  border-radius: 50%;
+  border: 3px solid #c9d0da;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+  float: left;
+  transition: .7s; }
+  .control__dot:last-child {
+    margin-right: 16px; }
+  .control__dot:hover {
+    background-color: #889eb8;
+    border: 3px solid #889eb8; }
+
 .header {
   background: url("../img/background.jpg") no-repeat top center;
   height: 783px;
@@ -505,7 +551,8 @@ a {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  margin-bottom: 35px; }
 
 .works__item {
   position: relative;
@@ -533,6 +580,13 @@ a {
 .works__image {
   width: auto;
   height: 100%; }
+
+.works__control {
+  text-indent: -9999px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .nav-works {
   padding-bottom: 47px; }

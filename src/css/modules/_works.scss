@@ -13,6 +13,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin-bottom: 35px;
 }
 
 .works__item {
@@ -52,4 +53,10 @@
 .works__image {
   width: auto;
   height: 100%;
+}
+
+.works__control {
+  text-indent: -9999px;
+  display: flex;
+  justify-content: center;
 }

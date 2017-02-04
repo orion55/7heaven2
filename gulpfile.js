@@ -73,10 +73,10 @@ gulp.task('pug', function () {
             basedir: './'
         }))
         .pipe(useref())
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cssnano()))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.pug.dist))
         .pipe(reload({stream: true}));
 });
@@ -138,7 +138,6 @@ gulp.task('copy-file', function () {
     return gulp.src(SRC_PATH + '/bower/bxslider/jquery.bxslider.js')
         .pipe(gulp.dest(DIST_PATH + '/js'));
 });
-
 
 // images
 gulp.task('images', function () {
