@@ -1,0 +1,50 @@
+.tweets {
+  background-color: #002e7e;
+  background: url("../img/tweets/background.jpg") top center no-repeat;
+  padding-top: 116px;
+  padding-bottom: 117px;
+}
+
+.tweets__wrap {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tweet__text {
+  font-family: 'DosisMedium', 'Arial', sans-serif;
+  color: #e9edf2;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 41px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 17px;
+}
+
+.tweet__wrap {
+  text-align: center;
+  //padding-bottom: 16px;
+}
+
+.tweet__author {
+  font-family: 'DosisMedium', 'Arial', sans-serif;
+  color: #e9edf2;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 41px;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 8px;
+}
+
+.tweet__date {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: rgba(#e9edf2, .61);
+  font-size: 12px;
+  font-weight: 400;
+  //line-height: 41px;
+  text-align: center;
+  padding-bottom: 39px;
+  text-transform: uppercase;
+}

@@ -11,7 +11,7 @@ block content
                     .promo__box
                         h2.promo__title Lorem ipsum dolor sit amet
                         .promo__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        a.btn.btn--animate(href="#") Read more
+                        a.btn.btn--animate.btn--white(href="#") Read more
                 - n++;
         span.slider__arrow.arrow.arrow--left#slider-prev
         span.slider__arrow.arrow.arrow--right#slider-next
@@ -73,7 +73,7 @@ block content
                             .popup__wrap
                                 img.popup_image(src="img/works/icon.svg" alt="icon")
                                 .popup__title Project Title Here
-                                a.btn(href="#") View Work
+                                a.btn.btn--white(href="#") View Work
                     - number++;
 
             .works__control
@@ -97,14 +97,11 @@ block content
                 while n < 5
                     li.tweets__item.tweet
                         .tweet__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
-                        .tweet__author themefire
-                        .tweet__date 35 seconds ago
+                        .tweet__wrap
+                            .tweet__author @themefire
+                            .tweet__date 35 seconds ago
+                            a.btn.btn--green(href="#") Follow Us
                     - n++;
-            a.btn.btn--tweet(href="#") Follow Us
-            .control__dots.control__dots--inverse
-                - var n = 1;
-                while n < 5
-                    a.control__dot(href="#")= n++
 
     .posts
         .posts__wrap

@@ -57,4 +57,14 @@ $(document).ready(function () {
             prevText: 'Left'
         }
     );
+    $('#slider-tweets').bxSlider(
+        {
+            preloadImages: true,
+            mode: 'horizontal',
+            auto: true,
+            controls: false,
+            pause: 5000,
+            pager: true
+        }
+    );
 });

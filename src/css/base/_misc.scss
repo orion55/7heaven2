@@ -104,3 +104,18 @@
 .title--works {
   padding-bottom: 33px;
 }
+
+.title--tweets {
+  color: white;
+  padding-bottom: 17px;
+  font-family: 'DosisMedium', 'Arial', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 41px;
+  text-align: center;
+}
+
+.tweets__wrap .bx-wrapper .bx-pager {
+  bottom: inherit;
+}

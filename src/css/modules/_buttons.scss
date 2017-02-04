@@ -1,30 +1,16 @@
 .btn {
   @include inline-block-top;
-  font-family: 'Dosis', 'Arial', sans-serif;
   white-space: nowrap;
   text-align: center;
   cursor: pointer;
   box-sizing: border-box;
-  border-radius: 24px;
-  background-color: transparent;
-  color: #e7fffe;
-  border: solid 1px rgba(255, 255, 255, 50);
   text-decoration: none;
   text-transform: uppercase;
-  padding: 11px 21px;
   vertical-align: middle;
-  transition: background-color 0.5s ease;
   user-select: none;
-  font-size: 12px;
-  font-weight: 300;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
-  &:hover {
-    background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), white;
-    color: black;
-    text-shadow: none;
-  }
+  position: relative;
+
   &:active {
-    position: relative;
     top: 5px;
   }
 }
@@ -32,4 +18,65 @@
 .btn--animate {
   animation-name: zoomIn;
   animation-duration: 0.75s;
+}
+
+.btn--white {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #e7fffe;
+  border: solid 1px rgba(255, 255, 255, 50);
+  background-color: transparent;
+  padding: 11px 21px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 24px;
+  transition: background-color 0.5s ease;
+  font-size: 12px;
+  font-weight: 300;
+
+  &:hover, &:focus {
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), white;
+    color: black;
+    text-shadow: none;
+  }
+}
+
+.btn--green {
+  font-family: 'DosisSemiBold', 'Arial', sans-serif;
+  color: #e9edf2;
+  border-radius: 10px;
+  background: linear-gradient(0deg, #39b54a 0%, #8dc63f 100%);
+  box-shadow: inset 0px -3px 0px 0px rgba(8, 130, 67, 0.75);
+  padding: 18px 34px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  z-index: 0;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+  &:before {
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1)), white;
+    box-shadow: inset 0px -3px 0px 0px gray;
+    content: '';
+    opacity: 0;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    z-index: -1;
+    transform: scaleX(0);
+  }
+
+  &:hover, &:focus {
+    color: #39b54a;
+    transition: all 0.5s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+    &:before {
+      opacity: 1;
+      transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+      transform: scaleX(1);
+    }
+  }
 }
