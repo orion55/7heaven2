@@ -18,6 +18,7 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const urlAdjuster = require('gulp-css-url-adjuster');
 const concat = require('gulp-concat');
+const minifycss = require('gulp-minify-css');
 const reload = browserSync.reload;
 
 /* --------- paths --------- */
@@ -101,6 +102,23 @@ gulp.task('sass', function () {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('styles', function () {
+    gulp.src([paths.scss.src])
+        .pipe(plumber({
+            errorHandler: function (error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 versions'))
+        .pipe(gulp.dest(paths.scss.dist + '/'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest(paths.scss.dist + '/'))
+        .pipe(browserSync.reload({stream: true}))
+});
+
 // server
 gulp.task('sync', function () {
     browserSync.init({
@@ -160,7 +178,7 @@ gulp.task('scripts', function () {
 // watch
 gulp.task('watch', function () {
     gulp.watch(paths.pug.src, ['pug']);
-    gulp.watch(paths.scss.src, ['sass']);
+    gulp.watch(paths.scss.src, ['styles']);
     gulp.watch(paths.js.src, ['scripts']);
     gulp.watch(paths.fonts.src, ['fonts']);
     gulp.watch([paths.img.src], function (event, cb) {
@@ -177,5 +195,5 @@ gulp.task('watch', function () {
 
 
 /* --------- default --------- */
-gulp.task('default', ['pug', 'sass', 'images', 'sync', 'fonts', 'copy-file', 'scripts', 'watch']);
+gulp.task('default', ['pug', 'styles', 'images', 'sync', 'fonts', 'copy-file', 'scripts', 'watch']);
 // gulp.task('default-no-image', ['pug', 'sass', 'sync', 'fonts', 'copy-file', 'watch-no-image']);

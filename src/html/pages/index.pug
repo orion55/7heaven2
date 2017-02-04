@@ -65,20 +65,16 @@ block content
                                 a.nav-works__link(href="#")= val
             .works__box
                 - var number = 1;
-                - for (var i = 1; i <= 2; i++) {
-                .works__row
-                    - for (var j = 1; j <= 3; j++) {
-                    .work
-                        a.work__link(href="#") Link
-                        .work__photo
-                            img.work__image(src="#" alt="work0" + number)
-                        .work__popup.popup
-                            img.popup_image(src="#" alt="#")
-                            .popup__title Project Title Here
-                            a.btn(href="#") View Work
+                while number < 7
+                    .works__item
+                        .works__photo
+                            img.works__image(src="img/works/work0" + number + ".jpg" alt="work0" + number)
+                        .works__popup.popup
+                            .popup__wrap
+                                img.popup_image(src="img/works/icon.svg" alt="icon")
+                                .popup__title Project Title Here
+                                a.btn(href="#") View Work
                     - number++;
-                    - }
-                - }
 
             .works__control.control.control--left
                 a.control__link(href="#") Left
