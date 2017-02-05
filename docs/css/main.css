@@ -84,6 +84,9 @@
   margin: 0;
   box-sizing: border-box; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: 'Dosis', 'Arial', sans-serif;
   color: #536783;
@@ -202,6 +205,9 @@ a {
 .post_comment .fa-comments, .post__category .fa-lightbulb-o {
   color: #91a7c6;
   padding-right: 7px; }
+
+.subtitle--pricing {
+  padding-bottom: 39px; }
 
 .arrow {
   background: url("../img/control/sprite_control.png") no-repeat;
@@ -783,7 +789,12 @@ a {
   margin: 0 auto; }
 
 .posts__item {
-  width: 324px; }
+  width: 324px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  background-color: #f4f6f9; }
   .posts__item:hover {
     box-shadow: 7px 13px 24px 0 rgba(28, 12, 46, 0.4); }
     .posts__item:hover .post__container {
@@ -821,7 +832,7 @@ a {
   border-left: solid 1px #b8c7da;
   border-right: solid 1px #b8c7da;
   text-align: left;
-  padding: 20px 17px 21px; }
+  padding: 18px 17px 14px; }
 
 .post__square {
   position: absolute;
@@ -841,7 +852,7 @@ a {
   line-height: 23px;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 7px;
   display: inline-block; }
   .post__link:hover {
     color: #2c528f;
@@ -878,14 +889,14 @@ a {
   color: white; }
 
 .post__info {
-  padding-bottom: 17px; }
+  padding-bottom: 14px; }
 
 .post__hr {
   color: #b8c7da;
   border: none;
   height: 1px;
   background-color: #b8c7da;
-  margin-bottom: 19px; }
+  margin-bottom: 16px; }
 
 .post__excerpt {
   font-family: 'Dosis', 'Arial', sans-serif;
@@ -901,6 +912,7 @@ a {
   border-left: solid 1px #b8c7da;
   border-right: solid 1px #b8c7da;
   padding: 11px 16px 12px 17px;
+  margin-top: auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -923,3 +935,54 @@ a {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center; }
+
+.pricing {
+  padding-top: 75px;
+  padding-bottom: 84px;
+  width: 1005px;
+  margin: 0 auto; }
+
+.pricing__box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  padding-bottom: 84px; }
+
+.pricing__item {
+  width: 324px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  background-color: #e9edf2; }
+
+.pricing__name {
+  font-family: 'DosisSemiBold', 'Arial', sans-serif;
+  color: #e9edf2;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  -webkit-mask-image: url("../img/pricing/alpha-mask.png");
+          mask-image: url("../img/pricing/alpha-mask.png");
+  background: linear-gradient(0deg, #40224b 0%, #2b5694 100%), #dae1e9;
+  padding-top: 35px;
+  padding-bottom: 33px;
+  text-transform: uppercase; }
+
+.pricing__value {
+  background-color: #dae1e9;
+  font-family: 'DosisSemiBold', 'Arial', sans-serif;
+  color: #2d528e;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 23px; }
+
+.pricing__container {
+  background-color: #dae1e9; }

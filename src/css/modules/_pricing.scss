@@ -1,0 +1,50 @@
+.pricing {
+  padding-top: 75px;
+  padding-bottom: 84px;
+  width: 1005px;
+  margin: 0 auto;
+}
+
+.pricing__box {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding-bottom: 84px;
+}
+
+.pricing__item {
+  width: 324px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #e9edf2;
+}
+
+.pricing__name {
+  font-family: 'DosisSemiBold', 'Arial', sans-serif;
+  color: #e9edf2;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  mask-image: url("../img/pricing/alpha-mask.png");
+  background: linear-gradient(0deg, #40224b 0%, #2b5694 100%), #dae1e9;
+  padding-top: 35px;
+  padding-bottom: 33px;
+  text-transform: uppercase;
+}
+
+.pricing__value {
+  background-color: #dae1e9;
+  font-family: 'DosisSemiBold', 'Arial', sans-serif;
+  color: #2d528e;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
+
+.pricing__container {
+  background-color: #dae1e9;
+}

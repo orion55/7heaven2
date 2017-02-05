@@ -149,17 +149,15 @@ block content
                     a.control__link(href="#") Right
 
     .pricing
-        .pricing__wrap
-            h2.title Pricing Tables
-            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        h2.title Pricing Tables
+        .subtitle.subtitle--pricing Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        .pricing__box
             - var pricing_obj = [{price: 99, name: "Basic"}, {price: 159, name: "Standart"}, {price: 299, name: "Unlimited"}];
                 each val in pricing_obj
                     .pricing__item
-                        .pricing__name= val.name
-                        .price
-                            span.price__text $
-                            span.price__value= val.price
-                            span.price__text / month
+                        .pricing__container
+                            .pricing__name= val.name
+                            .pricing__value= "$" + val.price + " / month"
                         .pricing__services.services
                             ul.services__list
                                 - var titles = ['Web Design', 'Photography', 'WordPress', 'Html Templates', 'eCommerce'];

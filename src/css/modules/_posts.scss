@@ -11,6 +11,9 @@
 
 .posts__item {
   width: 324px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f4f6f9;
 
   &:hover {
     box-shadow: 7px 13px 24px 0 rgba(28, 12, 46, 0.4);
@@ -57,7 +60,7 @@
   border-left: solid 1px #b8c7da;
   border-right: solid 1px #b8c7da;
   text-align: left;
-  padding: 20px 17px 21px;
+  padding: 18px 17px 14px;
 }
 
 .post__square {
@@ -79,7 +82,7 @@
   line-height: 23px;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 7px;
   display: inline-block;
 
   &:hover {
@@ -124,7 +127,7 @@
 }
 
 .post__info {
-  padding-bottom: 17px;
+  padding-bottom: 14px;
 }
 
 .post__hr {
@@ -132,7 +135,7 @@
   border: none;
   height: 1px;
   background-color: #b8c7da;
-  margin-bottom: 19px;
+  margin-bottom: 16px;
 }
 
 .post__excerpt {
@@ -150,6 +153,7 @@
   border-left: solid 1px #b8c7da;
   border-right: solid 1px #b8c7da;
   padding: 11px 16px 12px 17px;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
