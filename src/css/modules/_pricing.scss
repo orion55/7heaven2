@@ -1,5 +1,5 @@
 .pricing {
-  padding-top: 75px;
+  padding-top: 77px;
   padding-bottom: 84px;
   width: 1005px;
   margin: 0 auto;
@@ -17,6 +17,33 @@
   display: flex;
   flex-flow: column nowrap;
   background-color: #e9edf2;
+  padding-bottom: 34px;
+  border: solid 3px white;
+
+  &:hover {
+    border: solid 3px #f99535;
+
+    .pricing__container {
+      background-color: #f99535;
+    }
+
+    .pricing__value {
+      color: white;
+    }
+
+    .pricing__name {
+      background: linear-gradient(0deg, #ed1c24 0%, #f26522 100%);
+    }
+
+    .btn--pricing {
+      background: linear-gradient(0deg, #ed1c24 0%, #f26522 100%);
+
+      &:hover, &:focus {
+        color: #f15d22;
+      }
+
+    }
+  }
 }
 
 .pricing__name {
@@ -34,17 +61,43 @@
 }
 
 .pricing__value {
-  background-color: #dae1e9;
   font-family: 'DosisSemiBold', 'Arial', sans-serif;
   color: #2d528e;
   font-size: 30px;
   font-weight: 600;
   line-height: 35px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 23px;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  text-transform: uppercase;
 }
 
 .pricing__container {
   background-color: #dae1e9;
+}
+
+.price__list {
+  padding-top: 31px;
+  padding-bottom: 21px;
+}
+
+.price__item {
+  font-family: 'DosisLight', 'Arial', sans-serif;
+  color: #536783;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #dae1e9;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }

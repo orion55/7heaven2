@@ -158,12 +158,12 @@ block content
                         .pricing__container
                             .pricing__name= val.name
                             .pricing__value= "$" + val.price + " / month"
-                        .pricing__services.services
-                            ul.services__list
+                        .pricing__services.price
+                            ul.price__list
                                 - var titles = ['Web Design', 'Photography', 'WordPress', 'Html Templates', 'eCommerce'];
                                 each val in titles
-                                    li.services__item= val
-                        a.btn.btn--pricing(href="#") Purchase
+                                    li.price__item= val
+                        a.btn.btn--green.btn--pricing(href="#") Purchase
 
     .contacts
         .contacts__wrap
