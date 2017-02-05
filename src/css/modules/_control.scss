@@ -62,12 +62,13 @@
   height: 100%;
 }
 
-.control__dots {
+.dot{
   margin-top: 11px;
   @include clearfix();
+  cursor: pointer;
 }
 
-.control__dot {
+.dot__control {
   display: block;
   border-radius: 50%;
   border: 3px solid #c9d0da;
