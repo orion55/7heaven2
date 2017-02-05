@@ -106,41 +106,47 @@ block content
     .posts
         .posts__wrap
             h2.title Recent posts
-            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            - var category_obj = [{number:10, category: "Web Design"}, {number:167, category: "Video"}, {number:55, category: "Photo"}];
-            each val in category_obj
-                .posts__item.post
-                    .post__picture
-                        img.post__image(src="#" alt="#")
-                    .post__square square
-                    .post__title Lorem ipsum dolor sit amet
-                    .post__info
-                        span.post__text by
-                        span.post__author John Doe
-                        span.post__text /
-                        span.date January 25, 2014
-                    hr.post__hr
-                    .post__excerpt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                    .post__footer
-                        .post_comment
-                            i.fa.fa-comments(aria-hidden="true")
-                            span.post__comm-number= val.number
-                            span.post__foo-text Comments
-                        .post__category
-                            i.fa.fa-lightbulb-o(aria-hidden="true")
-                            span.post__cat-name= val.category
-                            span.post__foo-text Category
+            .subtitle.subtitle--posts Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .posts__box
+                - var category_obj = [{number:10, category: "Web Design"}, {number:167, category: "Video"}, {number:55, category: "Photo"}];
+                - var number = 1;
+                each val in category_obj
+                    .posts__item.post
+                        .post__picture
+                            img.post__image(src="img/posts/posts0" + number + ".jpg" alt="posts0" + number)
+                            .post__square square
+                        .post__container
+                            a.post__link(href="#") Lorem ipsum dolor sit amet
+                            .post__info
+                                span.post__text by
+                                a.post__url(href="#") John Doe
+                                span.post__text /
+                                span.post__text January 25, 2014
+                            hr.post__hr
+                            .post__excerpt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        .post__footer
+                            .post_comment
+                                i.fa.fa-comments(aria-hidden="true")
+                                a.post__url.post__url--footer(href="#")= val.number
+                                span.post__foo-text Comments
+                            .post__category
+                                i.fa.fa-lightbulb-o(aria-hidden="true")
+                                a.post__url.post__url--footer(href="#")= val.category
+                                span.post__foo-text Category
+                    - number++;
 
-            .posts__control.control.control--left
-                a.control__link(href="#") Left
+            .posts__control
+                .control.control--left
+                    a.control__link(href="#") Left
 
-            .dot
-                - var n = 1;
-                while n < 5
-                    a.dot__control(href="#")= n++
+                .dot
+                    - var n = 1;
+                    while n < 5
+                        a.dot__control(href="#")
+                        - n++;
 
-            .posts__control.control.control--right
-                a.control__link(href="#") Right
+                .control.control--right
+                    a.control__link(href="#") Right
 
     .pricing
         .pricing__wrap
