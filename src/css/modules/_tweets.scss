@@ -10,6 +10,7 @@
   width: 1000px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .tweet__text {
@@ -48,4 +49,11 @@
   text-align: center;
   padding-bottom: 39px;
   text-transform: uppercase;
+}
+
+.tweets__box {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 }
