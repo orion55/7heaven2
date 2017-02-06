@@ -218,8 +218,10 @@ block content
                 - n++;
 
     .subscribe
-        h2.title Subscribe to news and important events
-        form.subscribe__form.form(method="post" action="#" name="subscribe")
-            input.form__item(type="email" placeholder="EMail" name="email")
-            button.btn(type="submit") Subscribe
-        .subscribe__text * We promise to keep all your detalis safe and we wont send spam!
+        .subscribe__wrap
+            h2.title.title--subscribe Subscribe to news and important events
+            form.subscribe__form.form(method="post" action="#" name="subscribe")
+                .form__box
+                    input.form__item.form__input.form__input--subscribe(type="email" placeholder="EMail" name="email")
+                    button.btn.btn--green.btn--subscribe(type="submit") Subscribe
+            .subscribe__text * We promise to keep all your detalis safe and we wont send spam!

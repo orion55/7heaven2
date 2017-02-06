@@ -64,3 +64,12 @@
   min-height: 188px;
   margin-bottom: 31px;
 }
+
+.form__input--subscribe {
+  margin-right: 16px;
+  margin-bottom: 0;
+
+  &:last-of-type {
+    margin-right: 16px;
+  }
+}
