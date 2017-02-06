@@ -199,24 +199,26 @@ block content
     .feedback
         .feedback__wrap
             h2.title FeedBack
-            .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            .subtitle.subtitle--feedback Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             form.feedback__form.form(method="post" action="#" name="feedback")
-                input.form__item(type="text" placeholder="John Doe" name="username")
-                input.form__item(type="email" placeholder="EMail" name="email")
-                textarea.form__textarea(name="textarea")
-                button.btn(type="submit") Post Comment
+                .form__box
+                    input.form__item.form__input(type="text" placeholder="John Doe" name="username")
+                    input.form__item.form__input(type="email" placeholder="EMail" name="email")
+                textarea.form__item.form__input.form__textarea(name="textarea" placeholder="Message")
+                button.btn.btn--green.btn--small(type="submit") Post Comment
 
     .partners
         h2.title Our partners
-        .subtitle Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        .subtitle.subtitle--partners Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
         .partners__item
             - var n = 1;
             while n < 5
                 a.partners__link(href="#")
-                    img.partners__image(src="#" alt="#")
+                    img.partners__image(src="img/partners/partners0" + n + ".png" alt="partners0" + n)
                 - n++;
 
     .subscribe
+        h2.title Subscribe to news and important events
         form.subscribe__form.form(method="post" action="#" name="subscribe")
             input.form__item(type="email" placeholder="EMail" name="email")
             button.btn(type="submit") Subscribe

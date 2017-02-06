@@ -1,0 +1,32 @@
+.partners {
+  padding-top: 82px;
+  padding-bottom: 78px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.partners__item {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+.partners__link {
+  width: 220px;
+  height: 57px;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    animation-name: pulse;
+    animation-duration: 0.5s;
+  }
+}
+
+.partners__image {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}

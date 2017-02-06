@@ -216,6 +216,12 @@ a {
   width: 100%;
   height: 630px; }
 
+.subtitle--feedback {
+  padding-bottom: 54px; }
+
+.subtitle--partners {
+  padding-bottom: 51px; }
+
 .arrow {
   background: url("../img/control/sprite_control.png") no-repeat;
   display: block;
@@ -510,6 +516,10 @@ a {
 .btn--pricing {
   width: 154px;
   margin: 0 auto; }
+
+.btn--small {
+  width: 154px;
+  padding: 18px 21px; }
 
 .whatme {
   padding-top: 97px;
@@ -1110,8 +1120,106 @@ a {
       align-self: flex-end; }
 
 .location {
-  padding-top: 75px; }
+  padding-top: 80px; }
 
 .location__wrap {
   width: 1000px;
   margin: 0 auto; }
+
+.feedback {
+  padding-top: 78px;
+  padding-bottom: 63px;
+  background-color: #eaeef3; }
+
+.feedback__wrap {
+  width: 1005px;
+  margin: 0 auto; }
+
+::-webkit-input-placeholder {
+  color: #909fb4; }
+
+::-moz-placeholder {
+  color: #909fb4; }
+
+:-moz-placeholder {
+  color: #909fb4; }
+
+:-ms-input-placeholder {
+  color: #909fb4; }
+
+.feedback__form {
+  font-size: 0; }
+
+.form__item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  outline: none; }
+
+.form__input {
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(243, 245, 248, 0.39);
+  padding: 15px 33px;
+  border: 2px solid rgba(169, 184, 208, 0.39);
+  box-shadow: inset 0px -3px 0px 0px gray;
+  text-transform: uppercase;
+  -ms-flex: 1;
+      flex: 1;
+  color: #909fb4;
+  margin-right: 16px;
+  margin-bottom: 14px;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  transition: .5s; }
+  .form__input:focus {
+    box-shadow: inset 0px -3px 0px 0px #26497d;
+    border: 2px solid #26497d;
+    color: #6688b8; }
+  .form__input:last-of-type {
+    margin-right: 0; }
+
+.form__box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.form__textarea {
+  width: 100%;
+  min-height: 188px;
+  margin-bottom: 31px; }
+
+.partners {
+  padding-top: 82px;
+  padding-bottom: 78px;
+  width: 1000px;
+  margin: 0 auto; }
+
+.partners__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.partners__link {
+  width: 220px;
+  height: 57px;
+  overflow: hidden;
+  display: block;
+  text-align: center; }
+  .partners__link:hover {
+    animation-name: pulse;
+    animation-duration: 0.5s; }
+
+.partners__image {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%; }
