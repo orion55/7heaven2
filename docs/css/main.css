@@ -209,6 +209,13 @@ a {
 .subtitle--pricing {
   padding-bottom: 39px; }
 
+.subtitle--location {
+  padding-bottom: 39px; }
+
+.location__map {
+  width: 100%;
+  height: 630px; }
+
 .arrow {
   background: url("../img/control/sprite_control.png") no-repeat;
   display: block;
@@ -1101,3 +1108,10 @@ a {
   text-align: center;
   -ms-flex-item-align: end;
       align-self: flex-end; }
+
+.location {
+  padding-top: 75px; }
+
+.location__wrap {
+  width: 1000px;
+  margin: 0 auto; }
