@@ -1,7 +1,18 @@
 .socials__list {
   display: flex;
+  padding-top: 10px;
 }
 
 .socials__item {
   margin-right: 18px;
+}
+
+.socials__link i.fa {
+  color: white;
+  transition: .5s;
+  font-size: 1.5em;
+
+  &:hover {
+    color: #96d2ff;
+  }
 }
