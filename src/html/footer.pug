@@ -1,36 +1,36 @@
 footer.footer
-    .footer__wrap
+    .footer__wrap.footer__box
         .footer__column
             h3.footer__title Main Menu
-                ul.footer__list
-                    - var links = ["Home", "About Us", "Portfolio", "Blog", "Contact Us"];
-                        each val in links
-                            li.footer__item
-                                a.footer__link(href="#")= val
+            ul.footer__list
+                - var links = ["Home", "About Us", "Portfolio", "Blog", "Contact Us"];
+                    each val in links
+                        li.footer__item
+                            a.footer__link(href="#")= val
         .footer__column
             h3.footer__title Corporate
-                ul.footer__list
-                    - var links = ["Privacy Policy", "Terms of Usage", "Press release", "Our Team", "Jobs"];
-                        each val in links
-                            li.footer__item
-                                a.footer__link(href="#")= val
+            ul.footer__list
+                - var links = ["Privacy Policy", "Terms of Usage", "Press release", "Our Team", "Jobs"];
+                    each val in links
+                        li.footer__item
+                            a.footer__link(href="#")= val
         .footer__column
             h3.footer__title Help and Support
-                ul.footer__list
-                    - var links = ["Documentation", "Feedback", "Faq"];
-                        each val in links
-                            li.footer__item
-                                a.footer__link(href="#")= val
+            ul.footer__list
+                - var links = ["Documentation", "Feedback", "Faq"];
+                    each val in links
+                        li.footer__item
+                            a.footer__link(href="#")= val
         .footer__line
         .footer__column
             h3.footer__title Seventh Heaven
             .footer__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 
-    .footer__wrap.footer__wrap--bottom
-        .footer__box
-            .footer__info © 2014 Seventh Heaven — Designed by
-            a.footer__link.footer__link--inverse(href="#") ThemeFire
-        .footer__box.footer__box--right
+    .footer__wrapper
+        .footer__holder.footer__wrap
+            .footer__container
+                span.footer__info © 2014 Seventh Heaven — Designed by
+                a.footer__link.footer__link--inverse(href="#") ThemeFire
             .footer__socials.socials
                 ul.socials__list
                     - var social = ["facebook", "twitter", "dribbble", "flickr", "vimeo", "deviantart", "pinterest"];
