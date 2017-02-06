@@ -1,0 +1,82 @@
+.contacts {
+  background-color: #eaeef3;
+  padding-top: 67px;
+  padding-bottom: 95px;
+}
+
+.contacts__wrap {
+  width: 955px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.contacts__title {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #5465a2;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 17px;
+}
+
+.contacts__item {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 180px;
+    background: url("../img/contacts/delimiter.png") no-repeat;
+    position: absolute;
+    top: 0;
+    right: -96px;
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.contacts__text {
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #7a829e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.contacts__image {
+  margin: 0 auto 32px;
+  align-self: flex-start;
+  width: 84px;
+  min-height: 65px;
+  height: 1px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contacts__picture {
+  display: inline-block;
+  max-height: 100%;
+}
+
+.contacts__text--dots {
+  text-decoration: underline;
+}
+
+.contacts__box {
+  text-align: center;
+  align-self: flex-end;
+}

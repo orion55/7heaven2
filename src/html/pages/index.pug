@@ -168,20 +168,27 @@ block content
     .contacts
         .contacts__wrap
             .contacts__item
-                img.contacts__picture(src="#" alt="#")
+                .contacts__image
+                    img.contacts__picture(src="img/contacts/contacts01.png" alt="contacts01")
                 .contacts__title Address
-                .contacts__text 1600 Pennsylvania Avenue NW<br>Washington, DC 20500
+                .contacts__box
+                    .contacts__text 1600 Pennsylvania Avenue NW<br>Washington, DC 20500
             .contacts__item
-                img.contacts__picture(src="#" alt="#")
+                .contacts__image
+                    img.contacts__picture(src="img/contacts/contacts02.png" alt="contacts02")
                 .contacts__title Phones
-                span.contacts__text +32 4 8906 6004 - Office<br>+32 4 8522 6218 - Fax
+                .contacts__box
+                    span.contacts__text +32 4 8906 6004 - Office<br>+32 4 8522 6218 - Fax
             .contacts__item
-                img.contacts__picture(src="#" alt="#")
+                .contacts__image
+                    img.contacts__picture(src="img/contacts/contacts03.png" alt="contacts03")
                 .contacts__title Mail
-                span.contacts__text.contacts__text--dots support@7heaven.com
-                span.contacts__text - Support
-                span.contacts__text.contacts__text--dots info@7heaven.com
-                span.contacts__text - InfoCenter
+                .contacts__box
+                    span.contacts__text.contacts__text--dots support@7heaven.com
+                    span.contacts__text  - Support
+                .contacts__box
+                    span.contacts__text.contacts__text--dots info@7heaven.com
+                    span.contacts__text  - InfoCenter
 
     .location
         .location__wrap

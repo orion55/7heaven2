@@ -1,6 +1,6 @@
 .pricing {
   padding-top: 77px;
-  padding-bottom: 84px;
+  //padding-bottom: 84px;
   width: 1005px;
   margin: 0 auto;
 }
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  padding-bottom: 84px;
+  padding-bottom: 77px;
 }
 
 .pricing__item {
@@ -19,6 +19,7 @@
   background-color: #e9edf2;
   padding-bottom: 34px;
   border: solid 3px white;
+  transition: .5s;
 
   &:hover {
     border: solid 3px #f99535;
