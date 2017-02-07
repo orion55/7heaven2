@@ -8,6 +8,7 @@ $(document).ready(function () {
             center: [38.897674, -77.036545],
             zoom: 15
         });
+        myMap.behaviors.disable('scrollZoom');
         myMap.container.fitToViewport();
     }
 });
